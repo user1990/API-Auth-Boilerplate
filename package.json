@@ -1,0 +1,60 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "server-dev": "cross-env NODE_ENV=prod nodemon server/server.js",
+    "client-dev": "npm start --prefix client",
+    "start-dev": "concurrently \"npm run server-dev\" \"npm run client-dev\"",
+    "test": "cross-env NODE_ENV=test mocha --timeout 5000 __tests__/server/**/*.test.js",
+    "report": "cross-env NODE_ENV=test nyc --reporter=lcov mocha --timeout 5000 __tests__/server/**/*.test.js",
+    "text-report": "cross-env NODE_ENV=test nyc --reporter=text-summary mocha --timeout 5000 __tests__/server/**/*.test.js",
+    "nyc": "cross-env NODE_ENV=test nyc mocha --timeout 5000 __tests__/server/**/*.test.js"
+  },
+  "author": "user1990",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "concurrently": "^3.5.1",
+    "cors": "^2.8.4",
+    "cross-env": "^5.1.4",
+    "express": "^4.16.2",
+    "express-promise-router": "^3.0.1",
+    "joi": "^13.1.2",
+    "jsonwebtoken": "^8.2.0",
+    "mongoose": "^5.0.9",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-facebook-token": "^3.3.0",
+    "passport-google-plus-token": "^2.1.0",
+    "passport-jwt": "^3.0.1",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "faker": "^4.1.0",
+    "mocha": "^5.0.4",
+    "nodemon": "^1.17.1",
+    "nyc": "^11.4.1",
+    "rewire": "^3.0.2",
+    "sinon": "^4.4.3",
+    "sinon-chai": "^3.0.0"
+  },
+  "nyc": {
+    "exclude": [
+      "server/app.js",
+      "server/api/config/keys.js",
+      "server/api/services/passport.js",
+      "server/api/models/**/*.js",
+      "server/api/helpers/**/*.js",
+      "__tests__",
+      "node_modules"
+    ],
+    "cache": false,
+    "report-dir": "./__tests__/report"
+  }
+}
