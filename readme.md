@@ -16,8 +16,9 @@ This is my boilerplate files for API Authentication with Node and React/Redux on
 ### Client Side
 12. React Setup
 13. Redux Setup
-14. Redux-thunk
-15. HMR (Hot-Module-Replacement)
+14. Redux-Form
+15. Redux-Thunk
+16. HMR (Hot-Module-Replacement)
 
 ```bash
 $ git clone https://github.com/user1990/API-Auth-Boilerplate.git
