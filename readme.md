@@ -2,23 +2,24 @@
 This is my boilerplate files for API Authentication with Node and React/Redux on client side.
 
 ### Server Side
-1. Node/Express API Setup
-2. Server-Side Validation
-3. MongoDB/Mongoose
-4. JSON Web Tokens
-5. Passport and Strategies
-6. Bcrypt
-7. OAuth
-9. Google OAuth
-10. Facebook OAuth
-11. Unit Testing
+* Node/Express API Setup
+* Server-Side Validation
+* MongoDB/Mongoose
+* JSON Web Tokens
+* Passport and Strategies
+* Bcrypt
+* OAuth
+* Google OAuth
+* Facebook OAuth
+* Unit Testing
 
 ### Client Side
-12. React Setup
-13. Redux Setup
-14. Redux-Form
-15. Redux-Thunk
-16. HMR (Hot-Module-Replacement)
+* React Setup
+* Redux Setup
+* React-Router v4
+* Redux-Form
+* Redux-Thunk
+* HMR (Hot-Module-Replacement)
 
 ```bash
 $ git clone https://github.com/user1990/API-Auth-Boilerplate.git
