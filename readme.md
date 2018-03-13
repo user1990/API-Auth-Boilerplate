@@ -20,6 +20,8 @@ This is my boilerplate files for API Authentication with Node and React/Redux on
 * Redux-Form
 * Redux-Thunk
 * HMR (Hot-Module-Replacement)
+* Eslint
+* SASS
 
 ```bash
 $ git clone https://github.com/user1990/API-Auth-Boilerplate.git
