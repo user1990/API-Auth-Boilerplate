@@ -1,0 +1,45 @@
+@import './styles.scss';
+
+* {
+  margin: 0;
+  min-height: 0;
+  min-width: 0;
+  padding: 0;
+}
+
+body,
+html {
+  font-family: $font-family-primary;
+  height: 100%;
+  width: 100%;
+}
+
+div,
+input,
+textarea,
+button,
+select,
+a,
+ul,
+i {
+  -webkit-tap-highlight-color: $tap-highlight-color;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/********** MEDIA QUERIES **********/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) and (orientation: landscape) {
+
+}
+
+@media (max-width: 480px) {
+
+}

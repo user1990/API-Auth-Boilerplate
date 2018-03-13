@@ -1,0 +1,29 @@
+/********** FONTS **********/
+
+$font-family-primary: Roboto, Arial, sans-serif;
+
+/********** FONT SIZES **********/
+
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+$font-size-ten: em(10);
+$font-size-eleven: em(11);
+$font-size-twelve: em(12);
+$font-size-thirteen: em(13);
+$font-size-fourteen: em(14);
+$font-size-fifteen: em(15);
+$font-size-sixteen: em(16);
+$font-size-twenty: em(20);
+$font-size-twentyfour: em(24);
+$font-size-twentysix: em(26);
+$font-size-twentyeight: em(28);
+$font-size-thirty: em(30);
+$font-size-forty: em(40);
+
+/********** COLORS **********/
+$link-water: #d1eaf3;
+$tap-highlight-color: rgba(0, 0, 0, 0);

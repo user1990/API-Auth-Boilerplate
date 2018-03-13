@@ -6,7 +6,7 @@ import { fetchUser } from './reducers';
 
 import Landing from './components/Landing';
 
-import '../../styles/app.css';
+import '../../styles/_app.scss';
 
 class App extends Component {
   componentDidMount() {
