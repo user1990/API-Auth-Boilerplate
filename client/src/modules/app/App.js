@@ -29,7 +29,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const mapStateToProps = state => ({
-  auth: state.auth
+  user: state.user
 });
 
 const AppContainer = connect(mapStateToProps, mapDispatchToProps)(App);

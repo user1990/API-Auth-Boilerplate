@@ -1,16 +1,44 @@
+import api from '../../services/api';
+import setAuthorizationHeader from '../../utils/setAuthorizationHeader';
 ///// CONSTANTS /////
 export const actionTypes = {
-  FETCH_USER: 'FETCH/USER'
+  'USER_LOGGED_IN': 'USER/LOGGED_IN',
+  'USER_LOGGED_OUT': 'USER/LOGGED_OUT'
 };
 
 ///// ACTIONS /////
 
+// User
+export const userLoggedIn = user => ({
+  type: actionTypes.USER_LOGGED_IN,
+  payload: user
+});
+
+export const userLoggedOut = () => ({
+  type: actionTypes.USER_LOGGED_OUT
+});
+
+export const login = credentials => dispatch =>
+  api.user.login(credentials).then(user => {
+    localStorage.bookwormJWT = user.token;
+    setAuthorizationHeader(user.token);
+    dispatch(userLoggedIn(user));
+  });
+
 ///// REDUCERS /////
-export const authReducer = (auth = null, action) => {
+
+// User
+export const userReducer = (user = {}, action) => {
   switch (action.type) {
-    case actionTypes.FETCH_USER:
-      return action.payload || false;
+    case actionTypes.USER_LOGGED_IN:
+      return action.payload;
+
+    case actionTypes.USER_LOGGED_OUT:
+      return {};
+
     default:
-      return auth;
+      return user;
   }
-}
+};
+
+///// SELECTORS /////
