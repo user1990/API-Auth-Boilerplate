@@ -30,6 +30,7 @@
         "argsIgnorePattern": "res|next|^err"
       }
     ],
+    "linebreak-style": 0,
     "arrow-body-style": [2, "as-needed"],
     "no-param-reassign": [
       2,
@@ -52,13 +53,7 @@
     "react/no-unescaped-entities": 0,
     "jsx-a11y/accessible-emoji": 0,
     "radix": 0,
-    "no-shadow": [
-      2,
-      {
-        "hoist": "all",
-        "allow": ["resolve", "reject", "done", "next", "err", "error"]
-      }
-    ],
+    "no-shadow": 0,
     "quotes": [
       2,
       "single",
@@ -71,8 +66,7 @@
       "error",
       {
         "trailingComma": "es5",
-        "singleQuote": true,
-        "printWidth": 120
+        "singleQuote": true
       }
     ],
     "jsx-a11y/href-no-hash": "off",
